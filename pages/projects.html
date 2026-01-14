@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проекты</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Собственные стили -->
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+
+<body class="bg-light d-flex flex-column min-vh-100">
+
+<!-- ШАПКА -->
+<header class="bg-success text-white py-4">
+    <div class="container">
+        <h1 class="h3 mb-1">Проекты</h1>
+        <p class="mb-0 opacity-75">Дудник Валерий Валерьевич</p>
+    </div>
+</header>
+
+<!-- НАВИГАЦИЯ -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="projects.html">Проекты</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="diary.html">Дневник</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacts.html">Контакты</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ОСНОВНОЙ КОНТЕНТ -->
+<main class="container my-5">
+
+    <!-- ФИЛЬТР ПРОЕКТОВ -->
+    <div class="mb-4">
+        <div class="btn-group" role="group">
+            <button class="btn btn-outline-success active" onclick="filterProjects('all')">Все</button>
+            <button class="btn btn-outline-success" onclick="filterProjects('html')">HTML</button>
+            <button class="btn btn-outline-success" onclick="filterProjects('js')">JS</button>
+            <button class="btn btn-outline-success" onclick="filterProjects('react')">React</button>
+        </div>
+    </div>
+
+    <h2 class="mb-4">Мои проекты:</h2>
+
+    <div class="row g-4">
+
+        <!-- Проект 1 -->
+        <div class="col-md-4 project-item" data-category="html">
+            <div class="card h-100">
+                <img src="../images/project1.jpg" class="card-img-top" alt="Проект 1">
+                <div class="card-body">
+                    <h5 class="card-title">Личный сайт</h5>
+                    <p class="card-text">Сайт-портфолио с адаптивной вёрсткой.</p>
+                    <button class="btn btn-success"
+                            data-bs-toggle="modal"
+                            data-bs-target="#projectModal1">
+                        Подробнее
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Проект 2 -->
+        <div class="col-md-4 project-item" data-category="js">
+            <div class="card h-100">
+                <img src="../images/project2.jpg" class="card-img-top" alt="Проект 2">
+                <div class="card-body">
+                    <h5 class="card-title">Todo приложение</h5>
+                    <p class="card-text">Приложение для управления задачами.</p>
+                    <button class="btn btn-success"
+                            data-bs-toggle="modal"
+                            data-bs-target="#projectModal2">
+                        Подробнее
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Проект 3 -->
+        <div class="col-md-4 project-item" data-category="react">
+            <div class="card h-100">
+                <img src="../images/project3.jpg" class="card-img-top" alt="Проект 3">
+                <div class="card-body">
+                    <h5 class="card-title">Интернет-магазин</h5>
+                    <p class="card-text">Прототип магазина с корзиной.</p>
+                    <button class="btn btn-success"
+                            data-bs-toggle="modal"
+                            data-bs-target="#projectModal3">
+                        Подробнее
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<!-- МОДАЛЬНОЕ ОКНО 1 -->
+<div class="modal fade" id="projectModal1" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Личный сайт</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>Адаптивный сайт-портфолио.</p>
+                <p><strong>Технологии:</strong> HTML, CSS, Bootstrap</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- МОДАЛЬНОЕ ОКНО 2 -->
+<div class="modal fade" id="projectModal2" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Todo приложение</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>Приложение для планирования задач.</p>
+                <p><strong>Технологии:</strong> JavaScript</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- МОДАЛЬНОЕ ОКНО 3 -->
+<div class="modal fade" id="projectModal3" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Интернет-магазин</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>Прототип магазина с товарами и корзиной.</p>
+                <p><strong>Технологии:</strong> Bootstrap</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ФУТЕР -->
+<footer class="bg-dark text-white text-center py-3 mt-auto">
+    © 2025 Портфолио студента
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    function filterProjects(category) {
+        const items = document.querySelectorAll('.project-item');
+        const buttons = document.querySelectorAll('.btn-group .btn');
+
+        buttons.forEach(btn => btn.classList.remove('active'));
+
+        event.target.classList.add('active');
+
+        items.forEach(item => {
+            if (category === 'all' || item.dataset.category === category) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
